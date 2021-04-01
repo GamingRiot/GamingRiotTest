@@ -57,6 +57,7 @@
   margin-top: 20px;
 }
 #btn-explore {
+  outline:none;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(50px);
   width: 146px;
