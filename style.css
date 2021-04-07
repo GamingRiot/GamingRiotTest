@@ -3,6 +3,9 @@
   padding: 0px;
   box-sizing: border-box;
 }
+body {
+  overflow-x: hidden;
+}
 .navbar {
   top: 0px;
   background: rgba(255, 255, 255, 0.1);
@@ -36,19 +39,15 @@
   font-size: 28px;
   font-weight: 900;
 }
-#background {
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  height: 100%;
-}
+
 #hero-heading-1 {
   font-family: "Montserrat", sans-serif;
   font-size: 36px;
   font-weight: 900;
   color: #ffffff;
-  margin-top: 250px;
+  margin-top: 220px;
 }
+
 #hero-heading-2 {
   font-family: "Montserrat", sans-serif;
   font-size: 96px;
@@ -56,7 +55,9 @@
   color: #ffffff;
   margin-top: 20px;
 }
+
 #btn-explore {
+  outline: none;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(50px);
   width: 146px;
@@ -67,6 +68,7 @@
   color: #ffffff;
   height: 50px;
 }
+
 #btn-explore:hover {
   background: rgba(255, 255, 255, 0.3);
   transition: 0.1s ease;
@@ -76,14 +78,15 @@ video {
   top: 0;
   left: 0;
   width: 100%;
+  height: 100vh;
   z-index: -1000;
+  object-fit: cover;
 }
 .facebook {
   position: absolute;
-  width: 512px;
-  height: 512px;
-  left: 50px;
-  top: 990.46px;
+  width: 400px;
+  top: 900px;
+  left: 200px;
   opacity: 0.05;
   z-index: -2000;
   transform: rotate(29.15deg);
@@ -91,19 +94,40 @@ video {
 
 .linkedin {
   position: absolute;
-  width: 371px;
-  height: 371px;
-  left: 1290px;
-  top: 990.46px;
+  width: 380px;
+  top: 880px;
+  left: 1300px;
   background: url(linkedin.png);
   transform: rotate(-19.27deg);
   opacity: 0.05;
   z-index: -2000;
 }
+.twitter {
+  position: absolute;
+  width: 380px;
+  top: 1480px;
+  left: 200px;
+  transform: rotate(-14.52deg);
+  opacity: 0.05;
+  z-index: -2000;
+}
+
+.github {
+  position: absolute;
+  width: 380px;
+  top: 1480px;
+  left: 1350px;
+  transform: rotate(-14.52deg);
+  opacity: 0.05;
+  transform: rotate(24.48deg);
+  z-index: -2000;
+}
+
 .profile {
   text-align: center;
-  margin-top: 580px;
+  margin-top: 450px;
 }
+
 .profile-about {
   text-align: justify;
   text-align-last: left;
@@ -126,27 +150,7 @@ video {
   width: 50px;
   margin-left: 20px;
 }
-.twitter {
-  position: absolute;
-  width: 381px;
-  height: 381px;
-  top: 1686px;
-  transform: rotate(-14.52deg);
-  opacity: 0.05;
-  z-index: -2000;
-  left: 150px;
-}
-.github {
-  position: absolute;
-  width: 358px;
-  height: 358px;
-  left: 1382.36px;
-  top: 1686px;
-  transform: rotate(-14.52deg);
-  opacity: 0.05;
-  transform: rotate(24.48deg);
-  z-index: -2000;
-}
+
 .mywork-heading {
   text-align: center;
   font-size: 72px;
@@ -171,70 +175,46 @@ video {
   font-size: 24px;
   line-height: 29px;
   margin-top: 50px;
+  margin-bottom: 60px;
+}
+.work {
+  position: relative;
+  margin-bottom: 50px;
+  text-align: left;
 }
 
-.georgia {
-  margin-top: 100px;
+.work-image {
 }
-.georgia-text {
+.work-header {
   position: absolute;
-
-  height: 109px;
-  left: 984px;
-  top: 2400px;
+  left: 700px;
+  top: 150px;
+}
+.work-title {
   color: white;
   font-family: montserrat;
   font-style: normal;
   font-weight: 800;
   font-size: 36px;
   line-height: 44px;
+  z-index: 10;
 }
-.georgia-subtext {
+
+.work-subtitle {
   position: absolute;
-
-  left: 984px;
-  top: 2464px;
   font-family: Montserrat;
-
   font-weight: 300;
   font-size: 18px;
   line-height: 28px;
   color: #ffffff;
+  text-decoration: none;
+  z-index: 10;
 }
-.georgia-subtext:hover {
-  color: #f05454;
-}
-.mywork-nolimits {
-  text-align: right;
-  margin-top: 150px;
-}
-.nolimits-text {
-  position: absolute;
 
-  height: 44px;
-  left: 750px;
-  top: 2924px;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 36px;
-  line-height: 44px;
-  color: #ffffff;
-}
-.nolimits-subtext {
-  position: absolute;
-  left: 750px;
-  top: 2985px;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 28px;
-  color: #ffffff;
-}
-.nolimits-subtext:hover {
+.work-subtitle:hover {
   color: #f05454;
 }
+
 .skill {
   margin-top: 80px;
   margin-bottom: 130px;
@@ -340,9 +320,19 @@ video {
   margin-bottom: 70px;
 }
 .footer-items.footer-items-featured {
-  text-align: left;
-  margin-left: 138px;
+  text-align: center;
 }
+.social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+#social-icon {
+  width: 35px;
+  margin-left: 20px;
+}
+
 .footer-items a {
   text-decoration: none;
   color: white;

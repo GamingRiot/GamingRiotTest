@@ -6,6 +6,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
 
+    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;900&display=swap"
@@ -70,20 +73,20 @@
     <section class="front-dispaly">
       <div class="container">
         <div class="hero">
-          <h1 class="display-4" id="hero-heading-1" data-aos="fade-down">
-            Hello!
-          </h1>
+          <h1 class="" id="hero-heading-1" data-aos="fade-down">Hello!</h1>
           <p class="lead" id="hero-heading-2" data-aos="fade-down">
             I’m Tushar Arora, <br />a Full Stack Developer
           </p>
-          <button
-            type="button"
-            class="btn"
-            id="btn-explore"
-            data-aos="fade-down"
+          <a href="#about">
+            <button
+              type="button"
+              class="btn"
+              id="btn-explore"
+              data-aos="fade-down"
+            >
+              Explore
+            </button></a
           >
-            Explore
-          </button>
         </div>
       </div>
     </section>
@@ -120,30 +123,57 @@
         <br />
         <h1 class="mywork-heading">My Work</h1>
         <h3 class="mywork-subheading">WEBSITES</h3>
-        <div class="mywork-georgia">
-          <img
-            class="georgia"
-            src="images/gerogia.png"
-            div
-            data-aos="zoom-in-right"
-            alt=""
-          />
-          <h2 class="georgia-text" data-aos="fade-left">Georgia Restaurant</h2>
-          <a href="https://gamingriot.github.io/Georgia/"
-            ><p class="georgia-subtext" data-aos="fade-left">VIEW PROJECT</p></a
-          >
-        </div>
-        <div class="mywork-nolimits">
-          <img src="images/nolimits.png" data-aos="zoom-in-left" alt="" />
-          <h2 class="nolimits-text" data-aos="fade-right">NOLIMITS</h2>
-          <a href=""
-            ><p class="nolimits-subtext" data-aos="fade-right">
-              VIEW PROJECT
-            </p></a
-          >
+
+        <div class="work-list">
+          <div class="work">
+            <img
+              class="work-image"
+              data-aos="fade-right"
+              src="images/gerogia.png"
+              alt=""
+            />
+            <div class="work-header">
+              <div class="work-title" data-aos="fade-left">
+                Georgia Restaurant
+              </div>
+              <a href="#" class="work-subtitle" data-aos="fade-left"
+                >VIEW PROJECT</a
+              >
+            </div>
+          </div>
+          <div class="work">
+            <img
+              data-aos="fade-right"
+              class="work-image"
+              src="images/nolimits.png"
+              alt=""
+            />
+            <div class="work-header">
+              <div class="work-title" data-aos="fade-left">NOLIMITS</div>
+              <a href="#" class="work-subtitle" data-aos="fade-left"
+                >VIEW PROJECT</a
+              >
+            </div>
+          </div>
+          <div class="work">
+            <img
+              class="work-image"
+              data-aos="fade-right"
+              src="images/pt 1.png"
+              alt=""
+            />
+            <div class="work-header">
+              <div class="work-title" data-aos="fade-left">
+                Personal Training
+              </div>
+              <a href="#" class="work-subtitle" data-aos="fade-left"
+                >VIEW PROJECT</a
+              >
+            </div>
+          </div>
+          <br /><br />
         </div>
       </div>
-      <br /><br /><br /><br />
     </section>
     <section class="skill" id="skills">
       <div class="container">
@@ -205,19 +235,10 @@
           <div class="col col-md-4">
             <h5 class="footer-heading">Socials</h5>
             <div class="social-container">
-              <div class="footer-items footer-items-social-custom-link">
-                <span>Me,</span>
-                <a href="https://www.instagram.com/tushar.arora7/"
-                  >taking pictures</a
-                >
-                <a href="https://www.linkedin.com/in/tushar-arora-b2457210a/"
-                  >being professional</a
-                >
-                <a href="https://twitter.com/TusharA04500665"
-                  >sharing thoughts</a
-                >
-                <a href="https://www.facebook.com/">being social</a>
-              </div>
+              <img src="icons/facebook-1.svg" id="social-icon" alt="" />
+              <img src="icons/linkedin-1.svg" id="social-icon" alt="" />
+              <img src="icons/instagram-1.svg" id="social-icon" alt="" />
+              <img src="icons/twitter-1.svg" id="social-icon" alt="" />
             </div>
           </div>
         </div>
